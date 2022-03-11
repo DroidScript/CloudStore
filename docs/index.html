@@ -309,7 +309,7 @@
             <a href="#overview" class="toc-h1 toc-link" data-title="Overview">Overview</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#including-cloudstore" class="toc-h2 toc-link" data-title="Including CloudStore">Including CloudStore</a>
+                    <a href="#including-cloudstore" class="toc-h2 toc-link" data-title="Including CloudStore">Initializing CloudStore</a>
                   </li>
               </ul>
           </li>
@@ -389,21 +389,10 @@
 <blockquote>
 <aside class="notice-right">CloudStore uses unique API keys to allow access to the CloudStore service.</aside>
 </blockquote>
-<h2 id='including-cloudstore'>Including CloudStore</h2>
-<p>The are 2 ways to include CloudStore into your project</p>
-<h3 id='1-direct-link-to-our-cdn-version'>1. Direct link to our CDN version</h3>
-<p>You can link directly to the latest version by adding the following <strong>script</strong> tag inside your <strong>head</strong> tags:</p>
-<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">https://cdn.jsdelivr.net/gh/enjine-io/cloudstore@main/cloudstore.min.js</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/script</span><span class="err">&gt;
-</span></code></pre></div><h3 id='2-download-and-use-locally'>2. Download and use locally</h3>
-<p>You can download the latest version of the CloudStore script from the enjine.io GitHub repo at <a href="https://github.com/enjine-io/cloudstore">https://github.com/enjine-io/cloudstore</a>
- <a href="https://cdn.jsdelivr.net/gh/enjine-io/cloudstore@main/cloudstore.min.js">https://cdn.jsdelivr.net/gh/enjine-io/cloudstore@main/cloudstore.min.js</a></p>
-
-<p>Once downloaded, copy the script to your project directory and add it to your html file inside the <strong>head</strong> tags:</p>
-<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">&lt;PATH_TO_YOUR_FILE&gt;/cloudstore.min.js</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/script</span><span class="err">&gt;
-</span></code></pre></div><h3 id='initializing-cloudstore'>Initializing CloudStore</h3>
+<h2 id='including-cloudstore'>Initializing CloudStore</h2>
 <p>Before you can use CloudStore in your project you need to initialize it like this:
-<code>javascript
-new CloudStore( key, server, options )
+<code> 
+  app.CreateCloudStore( key, server, options )
 </code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
@@ -432,7 +421,7 @@ new CloudStore( key, server, options )
 
 <p>Below is an example:</p>
 <div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span> <span class="na">dataPass</span><span class="p">:</span> <span class="dl">"</span><span class="s2">bingo</span><span class="dl">"</span><span class="p">,</span> <span class="na">mediaPass</span><span class="p">:</span> <span class="dl">"</span><span class="s2">bobbo</span><span class="dl">"</span> <span class="p">};</span>
-<span class="kd">const</span> <span class="nx">cloud</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CloudStore</span><span class="p">(</span> <span class="dl">"</span><span class="s2">&lt;YOUR_CLOUDSTORE_KEY&gt;</span><span class="dl">"</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">options</span> <span class="p">)</span>
+<span class="kd">const</span> <span class="nx">cloud</span> <span class="o">=</span> <span class="k"></span> <span class="nx">app.CreateCloudStore</span><span class="p">(</span> <span class="dl">"</span><span class="s2">&lt;YOUR_CLOUDSTORE_KEY&gt;</span><span class="dl">"</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">options</span> <span class="p">)</span>
 </code></pre></div>
 <blockquote>
 <aside class="notice-right">You must replace <code>&lt;YOUR_CLOUDSTORE_KEY&gt;</code> with your unique CloudStore API key which you would have received when registering with enjine.io/</aside>
