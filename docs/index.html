@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>enjine.io CloudStore</title>
+    <title>droidscript.io CloudStore</title>
 
     <style media="screen">
       .highlight table td { padding: 5px; }
@@ -369,14 +369,14 @@
           </li>
       </ul>
         <ul class="toc-footer">
-            <li><a href='http://enjine.io/index.php/platforms/cloud/#idPricing'>Sign Up for a CloudStore API Key</a></li>
+            <li><a href='http://droidscript.io/index.php/platforms/cloud/#idPricing'>Sign Up for a CloudStore API Key</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='overview'>Overview</h1>
-<div id="img-overview"><img src="images/enjine_io_architecture-5955c480.png" alt="" /></div>
+<div id="img-overview"><img src="images/droidscript_io_architecture-5955c480.png" alt="" /></div>
 
 <p>CloudStore makes it possible to</p>
 
@@ -390,7 +390,7 @@
 <aside class="notice-right">CloudStore uses unique API keys to allow access to the CloudStore service.</aside>
 </blockquote>
 <h2 id='including-cloudstore'>Initializing CloudStore</h2>
-<p>Before you can use CloudStore in your project you need to initialize it like this: <br>
+<p>Before you can use CloudStore in your project you need to initialize it like this: <br><br>
 <code> 
   app.CreateCloudStore( key, server, options )
 </code></p>
@@ -424,7 +424,7 @@
 <span class="kd">const</span> <span class="nx">cloud</span> <span class="o">=</span> <span class="nx">app.CreateCloudStore</span><span class="p">(</span> <span class="dl">"</span><span class="s2">&lt;YOUR_CLOUDSTORE_KEY&gt;</span><span class="dl">"</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">options</span> <span class="p">)</span>
 </code></pre></div>
 <blockquote>
-<aside class="notice-right">You must replace <code>&lt;YOUR_CLOUDSTORE_KEY&gt;</code> with your unique CloudStore API key which you would have received when registering with enjine.io/</aside>
+<aside class="notice-right">You must replace <code>&lt;YOUR_CLOUDSTORE_KEY&gt;</code> with your unique CloudStore API key which you would have received when registering with droidscript.cloud/</aside>
 </blockquote>
 <h1 id='data'>Data</h1><h2 id='saving-data'>Saving data</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">cloud</span><span class="p">.</span><span class="nx">Save</span><span class="p">(</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">,</span> <span class="nx">callback</span><span class="p">,</span> <span class="nx">password</span> <span class="p">)</span>
 </code></pre></div><h3 id='query-parameters-2'>Query Parameters</h3>
@@ -453,7 +453,7 @@
 <tr>
 <td>password</td>
 <td>no</td>
-<td>Password to write over the data file if already exists (Passwords are set in the CloudStore <a href="https://enjine.cloud/cloudstore/admin.html">admin dashboard</a>). If a password has been set and you do not pass the correct value, you will get an error.</td>
+<td>Password to write over the data file if already exists (Passwords are set in the CloudStore <a href="https://droidscript.cloud/cloudstore/admin.html">admin dashboard</a>). If a password has been set and you do not pass the correct value, you will get an error.</td>
 </tr>
 </tbody></table>
 <h3 id='example'>Example</h3><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="c1">//Save some data.</span>
@@ -465,7 +465,7 @@
     <span class="k">if</span><span class="p">(</span> <span class="nx">response</span><span class="p">.</span><span class="nx">error</span> <span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="dl">"</span><span class="s2">Error: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">response</span><span class="p">.</span><span class="nx">error</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">, </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">response</span><span class="p">.</span><span class="nx">message</span> <span class="p">)</span>
     <span class="k">else</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">response</span><span class="p">.</span><span class="nx">message</span> <span class="p">)</span>
 <span class="p">}</span>
-</code></pre></div><h2 id='loading-data'>Loading data</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">cloud</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">callback</span><span class="p">,</span> <span class="nx">password</span> <span class="p">)</span>
+</code></pre></div><h2 id='loading-data'>Loading data</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">cloud</span><span class="p">.</span><span class="nx">Load</span><span class="p">(</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">callback</span><span class="p">,</span> <span class="nx">password</span> <span class="p">)</span>
 </code></pre></div><h3 id='query-parameters-3'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -487,7 +487,7 @@
 <tr>
 <td>password</td>
 <td>no</td>
-<td>Password to access the data file (Passwords are set in the CloudStore <a href="https://enjine.cloud/cloudstore/admin.html">admin dashboard</a>). If a password has been set and you do not pass the correct value, you will get an error.</td>
+<td>Password to access the data file (Passwords are set in the CloudStore <a href="https://droidscript.cloud/cloudstore/admin.html">admin dashboard</a>). If a password has been set and you do not pass the correct value, you will get an error.</td>
 </tr>
 </tbody></table>
 <h3 id='example-2'>Example</h3><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="c1">//Load some data.</span>
@@ -499,7 +499,7 @@
     <span class="k">if</span><span class="p">(</span> <span class="nx">response</span><span class="p">.</span><span class="nx">error</span> <span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span> <span class="dl">"</span><span class="s2">Error: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">response</span><span class="p">.</span><span class="nx">error</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">, </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">response</span><span class="p">.</span><span class="nx">message</span> <span class="p">)</span>
     <span class="k">else</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">)</span> <span class="p">)</span>
 <span class="p">}</span>
-</code></pre></div><h2 id='merging-data'>Merging data</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">cloud</span><span class="p">.</span><span class="nx">merge</span><span class="p">(</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">,</span> <span class="nx">callback</span><span class="p">,</span> <span class="nx">password</span> <span class="p">)</span>
+</code></pre></div><h2 id='merging-data'>Merging data</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">cloud</span><span class="p">.</span><span class="nx">Merge</span><span class="p">(</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">,</span> <span class="nx">callback</span><span class="p">,</span> <span class="nx">password</span> <span class="p">)</span>
 </code></pre></div>
 <p>The <strong>Merge</strong> function allows you to merge and update existing data objects.  If the data object you are trying to merge with does not exist, it will create a new object.</p>
 
@@ -564,7 +564,7 @@
     <span class="k">if</span><span class="p">(</span> <span class="nx">response</span><span class="p">.</span><span class="nx">error</span> <span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span> <span class="dl">"</span><span class="s2">Error: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">response</span><span class="p">.</span><span class="nx">error</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">, </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">response</span><span class="p">.</span><span class="nx">message</span> <span class="p">)</span>
     <span class="k">else</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">)</span> <span class="p">)</span>
 <span class="p">}</span>
-</code></pre></div><h2 id='listing-data-files'>Listing Data Files</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">cloud</span><span class="p">.</span><span class="nx">list</span><span class="p">(</span> <span class="nx">filter</span><span class="p">,</span> <span class="nx">callback</span> <span class="p">)</span>
+</code></pre></div><h2 id='listing-data-files'>Listing Data Files</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">cloud</span><span class="p">.</span><span class="nx">List</span><span class="p">(</span> <span class="nx">filter</span><span class="p">,</span> <span class="nx">callback</span> <span class="p">)</span>
 </code></pre></div>
 <p>The <strong>List</strong> function allows you to get a comma separated list of all your data files that match the filter.  </p>
 
@@ -604,7 +604,7 @@
 <blockquote>
 <aside class="notice-right">response.data will show a comma separated list of all files matching your filter</aside>
 </blockquote>
-<h2 id='deleting-data'>Deleting data</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">cloud</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">callback</span><span class="p">,</span> <span class="nx">password</span> <span class="p">)</span>
+<h2 id='deleting-data'>Deleting data</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">cloud</span><span class="p">.</span><span class="k">Delete</span><span class="p">(</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">callback</span><span class="p">,</span> <span class="nx">password</span> <span class="p">)</span>
 </code></pre></div>
 <p>The <strong>Delete</strong> function allows you to delete existing data objects from the CloudStore.</p>
 
@@ -631,7 +631,7 @@ If you try removing an object that does not exist, it will return with an error 
 <tr>
 <td>password</td>
 <td>no</td>
-<td>The value for the <strong>edit</strong> password set in the CloudStore <a href="https://enjine.cloud/cloudstore/admin.html">admin dashboard</a></td>
+<td>The value for the <strong>edit</strong> password set in the CloudStore <a href="https://droidscript.cloud/cloudstore/admin.html">admin dashboard</a></td>
 </tr>
 </tbody></table>
 <h3 id='example-5'>Example</h3><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">cloud</span><span class="p">.</span><span class="k">Delete</span><span class="p">(</span> <span class="dl">"</span><span class="s2">Shopping_List</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onDelete</span> <span class="p">)</span>
@@ -643,7 +643,7 @@ If you try removing an object that does not exist, it will return with an error 
     <span class="k">else</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">response</span><span class="p">.</span><span class="nx">message</span> <span class="p">)</span>
 <span class="p">}</span>
 </code></pre></div><h2 id='password-protection'>Password Protection</h2>
-<p>You can control <strong>read</strong> and <strong>write</strong> access to your data files by setting a password to each file in the CloudStore <a href="https://enjine.cloud/cloudstore/admin.html">admin dashboard</a>.  </p>
+<p>You can control <strong>read</strong> and <strong>write</strong> access to your data files by setting a password to each file in the CloudStore <a href="https://droidscript.cloud/cloudstore/admin.html">admin dashboard</a>.  </p>
 
 <p>To see an example of this in action please see the section <a href="#dashboard">Dashboard</a> below.</p>
 <h1 id='media'>Media</h1>
@@ -655,7 +655,7 @@ and stay persistent event when your app is removed from your device.</p>
 </blockquote>
 <h2 id='upload'>Upload</h2><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">cloud</span><span class="p">.</span><span class="nx">Upload</span><span class="p">(</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">filename</span><span class="p">,</span> <span class="nx">type</span><span class="p">,</span> <span class="nx">callback</span><span class="p">,</span> <span class="nx">password</span> <span class="p">)</span>
 </code></pre></div>
-<p>The <strong>Upload</strong> function allows you to upload a file to the cloud.  You can set permissions for editing files in the <a href="https://enjine.cloud/cloudstore/admin.html">admin dashboard</a></p>
+<p>The <strong>Upload</strong> function allows you to upload a file to the cloud.  You can set permissions for editing files in the <a href="https://droidscript.cloud/cloudstore/admin.html">admin dashboard</a></p>
 
 <table><thead>
 <tr>
@@ -687,7 +687,7 @@ and stay persistent event when your app is removed from your device.</p>
 <tr>
 <td>password</td>
 <td>no</td>
-<td>A password if one has been set in the <a href="https://enjine.cloud/cloudstore/admin.html">admin dashboard</a></td>
+<td>A password if one has been set in the <a href="https://droidscript.cloud/cloudstore/admin.html">admin dashboard</a></td>
 </tr>
 </tbody></table>
 
@@ -704,22 +704,22 @@ and stay persistent event when your app is removed from your device.</p>
     <span class="k">else</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span> <span class="p">)</span>
 <span class="p">}</span>
 </code></pre></div><h2 id='file-location'>File Location</h2>
-<p>You can copy the full path to your file in the CloudStore <a href="https://enjine.cloud/cloudstore/admin.html">admin dashboard</a>. For more information on this read the section on <a href="#media">Media Files</a> below.</p>
+<p>You can copy the full path to your file in the CloudStore <a href="https://droidscript.cloud/cloudstore/admin.html">admin dashboard</a>. For more information on this read the section on <a href="#media">Media Files</a> below.</p>
 
 <blockquote>
 <aside class="notice-right">Media paths are unique and unguessable (non sequential) for safe sharing publically or privately.</aside>
 </blockquote>
 <h2 id='password-protection-2'>Password Protection</h2>
-<p>You can control <strong>edit</strong> access to your media files by setting a password to each file in the CloudStore <a href="https://enjine.cloud/cloudstore/admin.html">admin dashboard</a>.</p>
+<p>You can control <strong>edit</strong> access to your media files by setting a password to each file in the CloudStore <a href="https://droidscript.cloud/cloudstore/admin.html">admin dashboard</a>.</p>
 
 <p>If a password has been set on a media file then you must include the password as the final parameter in the <strong>Upload</strong> function call.</p>
 
 <p>An example can be seen in the following section.</p>
 <h1 id='dashboard'>Dashboard</h1><h2 id='loading'>Loading</h2>
 <ul>
-<li>Navigate to <a href="https://enjine.cloud/cloudstore/admin.html">https://enjine.cloud/cloudstore/admin.html</a></li>
+<li>Navigate to <a href="https://droidscript.cloud/cloudstore/admin.html">https://droidscript.cloud/cloudstore/admin.html</a></li>
 <li>Log in using your <strong>Username</strong> and <strong>Password</strong> - Passwords are auto generated and are sent to you via email</li>
-<li>You should now be at the enjine.io dashboard</li>
+<li>You should now be at the droidscript.io dashboard</li>
 </ul>
 <h2 id='user-info'>User Info</h2>
 <p><img src="images/dashboard_user_info-e71b18c7.png" alt="" /></p>
@@ -731,7 +731,7 @@ and stay persistent event when your app is removed from your device.</p>
 <p>The <strong>data files</strong> panel displays all your uploaded data files.  If you click on the names of the files, you will see information on usage and size appear 
 in the panel to the right of the list.</p>
 <h3 id='password-protection-3'>Password Protection</h3>
-<p>It is possible to control <strong>view</strong> and <strong>edit</strong> access to data files inside the <a href="https://enjine.cloud/cloudstore/admin.html">admin dashboard</a>.</p>
+<p>It is possible to control <strong>view</strong> and <strong>edit</strong> access to data files inside the <a href="https://droidscript.cloud/cloudstore/admin.html">admin dashboard</a>.</p>
 
 <p>To the right of each file is a checkbox.  Select a checkbox and you will see the <strong>delete</strong> and <strong>padlock</strong> icons highlighted.</p>
 
@@ -811,7 +811,7 @@ including a preview snapshot of the file if it&#39;s an image file.</p>
 <p>We want to protect our uploaded file &quot;jazz3.jpg&quot; from being overwritten by unauthroised users.</p>
 
 <p>To do this we:
-    - Assign a password to the file using our <a href="https://enjine.cloud/cloudstore/admin.html">admin dashboard</a>
+    - Assign a password to the file using our <a href="https://droidscript.cloud/cloudstore/admin.html">admin dashboard</a>
     - Now whenever we want to override the file, we must include the password as our final parameter in the <strong>Upload</strong> function</p>
 
 <p>For thie example we have assigned the password as <strong>12345</strong></p>
@@ -827,7 +827,7 @@ including a preview snapshot of the file if it&#39;s an image file.</p>
 </code></pre></div>
 <p>If you run this code you should get a response back with the messsage: <strong>File Uploaded</strong></p>
 
-<p>You can see you uploaded file in your using our <a href="https://enjine.cloud/cloudstore/admin.html">admin dashboard</a></p>
+<p>You can see you uploaded file in your using our <a href="https://droidscript.cloud/cloudstore/admin.html">admin dashboard</a></p>
 
       </div>
       <div class="dark-box">
