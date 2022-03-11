@@ -490,7 +490,7 @@
 </tr>
 </tbody></table>
 <h3 id='example-2'>Example</h3><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="c1">//Load some data.</span>
-<span class="nx">cloud</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span> <span class="dl">"</span><span class="s2">Shopping_List</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onLoad</span> <span class="p">)</span>
+<span class="nx">cloud</span><span class="p">.</span><span class="nx">Load</span><span class="p">(</span> <span class="dl">"</span><span class="s2">Shopping_List</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onLoad</span> <span class="p">)</span>
 
 <span class="c1">//Handle the response.</span>
 <span class="kd">function</span> <span class="nx">onLoad</span><span class="p">(</span> <span class="nx">response</span> <span class="p">)</span>
@@ -767,7 +767,7 @@ in the panel to the right of the list.</p>
 <p>Now let&#39;s send the correct password as the final parameter in the <strong>Merge</strong> function like so:</p>
 <div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">function</span> <span class="nx">btnMerge_OnTouch</span><span class="p">()</span>
 <span class="p">{</span>
-    <span class="nx">cloud</span><span class="p">.</span><span class="nx">merge</span><span class="p">(</span> <span class="dl">"</span><span class="s2">Shopping_List</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span> <span class="na">plums</span><span class="p">:</span><span class="mi">5</span> <span class="p">},</span> <span class="nx">onMerge</span><span class="p">,</span> <span class="dl">"</span><span class="s2">12345</span><span class="dl">"</span> <span class="p">)</span>
+    <span class="nx">cloud</span><span class="p">.</span><span class="nx">Merge</span><span class="p">(</span> <span class="dl">"</span><span class="s2">Shopping_List</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span> <span class="na">plums</span><span class="p">:</span><span class="mi">5</span> <span class="p">},</span> <span class="nx">onMerge</span><span class="p">,</span> <span class="dl">"</span><span class="s2">12345</span><span class="dl">"</span> <span class="p">)</span>
 <span class="p">}</span>
 
 <span class="kd">function</span> <span class="nx">onMerge</span><span class="p">(</span> <span class="nx">response</span> <span class="p">)</span>
@@ -816,7 +816,7 @@ including a preview snapshot of the file if it&#39;s an image file.</p>
 <p>For thie example we have assigned the password as <strong>12345</strong></p>
 <div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="c1">// Let's assume you want to upload an image to the CloudStore</span>
 <span class="c1">// You must upload images as a string in a format such as base64</span>
-<span class="nx">cloud</span><span class="p">.</span><span class="nx">upload</span><span class="p">(</span> <span class="nx">file_data</span><span class="p">,</span> <span class="dl">"</span><span class="s2">jazz3.jpg</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">image/jpg</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onUpload</span><span class="p">,</span> <span class="dl">"</span><span class="s2">12345</span><span class="dl">"</span> <span class="p">)</span>
+<span class="nx">cloud</span><span class="p">.</span><span class="nx">Upload</span><span class="p">(</span> <span class="nx">file_data</span><span class="p">,</span> <span class="dl">"</span><span class="s2">jazz3.jpg</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">image/jpg</span><span class="dl">"</span><span class="p">,</span> <span class="nx">onUpload</span><span class="p">,</span> <span class="dl">"</span><span class="s2">12345</span><span class="dl">"</span> <span class="p">)</span>
 
 <span class="kd">function</span> <span class="nx">onUpload</span><span class="p">(</span> <span class="nx">response</span> <span class="p">)</span>
 <span class="p">{</span>
